@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  photomanager:
+    container_name: pm-classifier
+    build: .
+    ports:
+     - "8888:80"
+    volumes:
+     - ./frontend-web:/srv/frontend-web
+     - ../photo-manager/data/photos:/photos
